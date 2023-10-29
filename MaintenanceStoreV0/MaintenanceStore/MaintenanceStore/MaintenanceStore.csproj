@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{18D86B16-0401-44E4-886D-E84EE175F583}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MaintenanceStore</RootNamespace>
+    <AssemblyName>MaintenanceStore</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>comics-war-machine_97496.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject>MaintenanceStore.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>C12FDF679606EFE56B548F5B4FC371F5E30C618E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>MaintenanceStore_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>C:\Users\Eng_Rania\Downloads\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Users\Eng_Rania\Downloads\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>C:\Users\Eng_Rania\Desktop\mysql\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.0\lib\netstandard1.1\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net45\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net45\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\category.cs" />
+    <Compile Include="Classes\Dep.cs" />
+    <Compile Include="Classes\MovmentsClass.cs" />
+    <Compile Include="Classes\Product.cs" />
+    <Compile Include="Classes\Source_place.cs" />
+    <Compile Include="Classes\Store.cs" />
+    <Compile Include="Classes\StocksData.cs" />
+    <Compile Include="DataAccessLayer\DAL.cs" />
+    <Compile Include="Interface\Forms\AboutApp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interface\Forms\AboutApp.Designer.cs">
+      <DependentUpon>AboutApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Forms\addCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Forms\addCategory.Designer.cs">
+      <DependentUpon>addCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Forms\addcomproduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Forms\addcomproduct.Designer.cs">
+      <DependentUpon>addcomproduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Forms\adddSourceplace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Forms\adddSourceplace.Designer.cs">
+      <DependentUpon>adddSourceplace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Forms\addDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Forms\addDepartment.Designer.cs">
+      <DependentUpon>addDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Forms\addstore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Forms\addstore.Designer.cs">
+      <DependentUpon>addstore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Forms\Barcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Forms\Barcode.Designer.cs">
+      <DependentUpon>Barcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Forms\addproduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Forms\addproduct.Designer.cs">
+      <DependentUpon>addproduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Forms\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Forms\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Forms\movements_prod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Forms\movements_prod.Designer.cs">
+      <DependentUpon>movements_prod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Forms\Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Forms\Info.Designer.cs">
+      <DependentUpon>Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Forms\Movements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Forms\Movements.Designer.cs">
+      <DependentUpon>Movements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Forms\MovementView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Forms\MovementView.Designer.cs">
+      <DependentUpon>MovementView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Forms\Productview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Forms\Productview.Designer.cs">
+      <DependentUpon>Productview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Forms\Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Forms\Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Forms\StocksAllDatae.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Forms\StocksAllDatae.Designer.cs">
+      <DependentUpon>StocksAllDatae.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Forms\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Forms\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Usercontrol\Info.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interface\Usercontrol\Info.Designer.cs">
+      <DependentUpon>Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Interface\Forms\AboutApp.resx">
+      <DependentUpon>AboutApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Forms\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Forms\addCategory.resx">
+      <DependentUpon>addCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Forms\addcomproduct.resx">
+      <DependentUpon>addcomproduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Forms\adddSourceplace.resx">
+      <DependentUpon>adddSourceplace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Forms\addDepartment.resx">
+      <DependentUpon>addDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Forms\addstore.resx">
+      <DependentUpon>addstore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Forms\Barcode.resx">
+      <DependentUpon>Barcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Forms\addproduct.resx">
+      <DependentUpon>addproduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Forms\movements_prod.resx">
+      <DependentUpon>movements_prod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Forms\Info.resx">
+      <DependentUpon>Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Forms\Movements.resx">
+      <DependentUpon>Movements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Forms\MovementView.resx">
+      <DependentUpon>MovementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Forms\Productview.resx">
+      <DependentUpon>Productview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Forms\StocksAllDatae.resx">
+      <DependentUpon>StocksAllDatae.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Forms\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Usercontrol\Info.resx">
+      <DependentUpon>Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="MaintenanceStore_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcode-scanner-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="comics-war-machine_97496.ico" />
+    <Content Include="MetroFramework.txt" />
+    <None Include="Resources\phoca_thumb_l_IMG_73441.jpg" />
+    <None Include="Resources\phoca_thumb_l_img_73421.jpg" />
+    <None Include="Resources\phoca_thumb_l_IMG_7344.jpg" />
+    <None Include="Resources\product-48.png" />
+    <None Include="Resources\Open-folder-search-icon2.png" />
+    <None Include="Resources\Zoom-icon.png" />
+    <None Include="Resources\SEO-icon1.png" />
+    <None Include="Resources\trash-icon1.png" />
+    <None Include="Resources\Text-edit-icon1.png" />
+    <None Include="Resources\printer.png" />
+    <None Include="Resources\resize-3-64.png" />
+    <None Include="Resources\resize-3-24.png" />
+    <None Include="Resources\pause.png" />
+    <None Include="Resources\play.png" />
+    <None Include="Resources\unnamed.jpg" />
+    <None Include="Resources\phoca_thumb_l_IMG_7275.jpg" />
+    <None Include="Resources\phoca_thumb_l_img_7342.jpg" />
+    <None Include="Resources\search-48.png" />
+    <None Include="Resources\Text-edit-icon.png" />
+    <None Include="Resources\trash-icon.png" />
+    <None Include="Resources\SEO-icon.png" />
+    <None Include="Resources\Excel-icon.png" />
+    <None Include="Resources\Clear-icon.png" />
+    <None Include="Resources\Apps-Zoom-Fit-icon.png" />
+    <None Include="Resources\filled-box-48.png" />
+    <None Include="Resources\g.png" />
+    <None Include="Resources\close-window-32.png" />
+    <None Include="Resources\g1.png" />
+    <None Include="Resources\home-3-48.png" />
+    <None Include="Resources\arrow-133-48.png" />
+    <None Include="Resources\arrow-195-48.png" />
+    <None Include="Resources\2.png" />
+    <None Include="Resources\Annotation 2021-01-18 105649.png" />
+    <None Include="Resources\Annotation 2021-01-18 115608.png" />
+    <None Include="Resources\Annotation 2021-01-29 101513.png" />
+    <None Include="Resources\DC12V-DC24V-110V-220VAC-20mm-Core-Dia-Pneumatic-Control-Air-Solenoid-Valve-Coil-52mm-Height.jpg_q50.jpg" />
+    <None Include="Resources\d15000100123927.jpg" />
+    <None Include="Resources\70991537.jpg" />
+    <None Include="Resources\691_72-SNCB.jpg" />
+    <None Include="Resources\418BE52yJ8L.jpg" />
+    <None Include="Resources\Annotation 2021-01-29 104443.png" />
+    <None Include="Resources\Annotation 2021-01-29 104650.png" />
+    <None Include="Resources\Information-icon.png" />
+    <None Include="Resources\Button-Pause-icon.png" />
+    <None Include="Resources\add-row-64.png" />
+    <None Include="Resources\info-6-64.png" />
+    <None Include="Resources\Clear-icon1.png" />
+    <None Include="Resources\Excel-icon1.png" />
+    <None Include="Resources\barcode-48.png" />
+    <None Include="Resources\11.png" />
+    <None Include="Resources\barcode-481.png" />
+    <None Include="Resources\filled-box-64.png" />
+    <None Include="Resources\add-folder-64.png" />
+    <None Include="Resources\Button-Add-icon.png" />
+    <None Include="Resources\Button-Add-icon %281%29.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\edit %281%29.png" />
+    <None Include="Resources\edit %282%29.png" />
+    <Content Include="Resources\Open-folder-search-icon.png" />
+    <None Include="Resources\Open-folder-search-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
